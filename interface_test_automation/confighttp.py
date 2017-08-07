@@ -75,7 +75,7 @@ class ConfigHttp:
             # data = data.encode('utf-8')
             url = 'http://' + self.host + ':' + str(self.port) + url + data_str + '&' + token
         else:
-            data = json.dumps(eval(data))
+            # data = json.dumps(eval(data))
             data = data.encode('utf-8')
             url = 'http://' + self.host + ':' + str(self.port) + url
         print (url)

@@ -41,23 +41,8 @@ class test_addRole(ParametrizedTestCase):
                     del self.data['organization']
                     self.data.update(self.OrgId)
                     self.data = json.dumps(self.data)
-                    # self.baseParams.update(self.orgParams)
-                    # self.params = json.dumps(self.baseParams)
                     response = self.http.post(self.test_data.request_url, self.data)
                     print (response)
                     self.UpdateRecordWithoutResponse(response)
                     self.BaseDataAssert(response)
                     self.UpdateRecordWithResponse()
-            # try:
-            #     self.db2_cursor.execute('SELECT id FROM organization WHERE name = %s', (self.higherOrg,))
-            #     self.higherOrgId = self.db2_cursor.fetchone()[0]
-            #     self.orgParams = {'name': self.orgName, 'orgName': self.higherOrg, 'orgId': self.higherOrgId,
-            #                       'address': 'AUTO机构-下级社区地址'}
-            #     self.baseParams.update(self.orgParams)
-            #     self.params = json.dumps(self.baseParams)
-            #     response = self.http.post(self.test_data.request_url, self.params)
-            #     print (response)
-            #
-            # except Exception as e:
-            #     print('Error : ' + '%s' %e)
-            # return
