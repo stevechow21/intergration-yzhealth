@@ -15,7 +15,7 @@ from InterfaceCase.edit_data import editData
 from InterfaceCase.test_add_org import test_addOrg
 from InterfaceCase.test_add_role import test_addRole
 from InterfaceCase.test_add_permission import test_addPermission
-
+from InterfaceCase.test_add_account import test_addAccount
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -41,6 +41,10 @@ class TestInterfaceCase(ParametrizedTestCase):
     #### 后台操作-添加权限
     def test_add_permission(self):
         test_addPermission.test_addPermission(self)
+
+    #### 后台操作-添加账户
+    def test_add_account(self):
+        test_addAccount.test_addAccount(self)
 
     def tearDown(self):
         pass

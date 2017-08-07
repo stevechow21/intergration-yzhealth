@@ -11,7 +11,6 @@ import json
 #### 后台操作-添加机构
 class test_addOrg(ParametrizedTestCase):
     def test_addOrg(self):
-        # global response
         #### 根据被测接口的实际情况，合理的添加HTTP头
         header = {'Host': '172.16.10.100:17021',
                   'Accept': 'application/json, text/javascript, */*; q=0.01',

@@ -11,7 +11,6 @@ import json
 #### 后台操作-添加权限
 class test_addPermission(ParametrizedTestCase):
     def test_addPermission(self):
-        # global response
         #### 根据被测接口的实际情况，合理的添加HTTP头
         header = {'Host': '172.16.10.100:17021',
                   'Accept': 'application/json, text/javascript, */*; q=0.01',
