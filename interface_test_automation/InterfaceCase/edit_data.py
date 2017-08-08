@@ -44,7 +44,6 @@ class editData(ParametrizedTestCase):
             data_dict = json.loads(self.test_data.request_param)
             data_dict.update(id_dict)
             data = json.dumps(data_dict)
-        data = data.encode('utf-8')
         response = self.http.post(self.test_data.request_url, data)
         print (response)
         self.UpdateRecordWithoutResponse(response)

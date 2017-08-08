@@ -16,6 +16,7 @@ from InterfaceCase.test_add_org import test_addOrg
 from InterfaceCase.test_add_role import test_addRole
 from InterfaceCase.test_add_permission import test_addPermission
 from InterfaceCase.test_add_account import test_addAccount
+from InterfaceCase.test_account_relate_role import test_accountRelateRole
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -45,6 +46,10 @@ class TestInterfaceCase(ParametrizedTestCase):
     #### 后台操作-添加账户
     def test_add_account(self):
         test_addAccount.test_addAccount(self)
+
+    #### 后台操作-账户关联角色
+    def test_account_relate_role(self):
+        test_accountRelateRole.test_accountRelateRole(self)
 
     def tearDown(self):
         pass

@@ -40,11 +40,11 @@ class test_addOrg(ParametrizedTestCase):
             ####查询上级机构id
             self.db2_cursor.execute('SELECT id FROM organization WHERE name = %s', (self.higherOrg,))
             if len(self.db2_cursor.fetchall()) == 0:
-                print ('Error : higher org un-existed')
+                print ('******************** Error : higher org un-existed ********************')
             else:
                 self.db2_cursor.execute('SELECT id FROM organization WHERE name = %s', (self.higherOrg,))
                 if len(self.db2_cursor.fetchall()) > 1:
-                    print ('Error : you have the same higher org')
+                    print ('******************** Error : you have the same higher org ********************')
                 else:
                     self.db2_cursor.execute('SELECT id FROM organization WHERE name = %s', (self.higherOrg,))
                     self.higherOrgId = self.db2_cursor.fetchone()[0]

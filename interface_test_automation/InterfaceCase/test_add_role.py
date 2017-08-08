@@ -24,16 +24,16 @@ class test_addRole(ParametrizedTestCase):
         self.orgName = self.data['organization']
 
         if self.orgName == '':
-            print ('################### Error : Please input organization name ###################')
+            print ('******************** Error : Please input organization name ********************')
         else:
             ####查询绑定机构id
             self.db2_cursor.execute('SELECT id FROM organization WHERE name = %s', (self.orgName,))
             if len(self.db2_cursor.fetchall()) == 0:
-                print ('################### Error : org un-existed ###################')
+                print ('******************** Error : org un-existed ********************')
             else:
                 self.db2_cursor.execute('SELECT id FROM organization WHERE name = %s', (self.orgName,))
                 if len(self.db2_cursor.fetchall()) > 1:
-                    print ('################### Error : you have the same org ###################')
+                    print ('******************** Error : you have the same org ********************')
                 else:
                     self.db2_cursor.execute('SELECT id FROM organization WHERE name = %s', (self.orgName,))
                     self.OrgId = self.db2_cursor.fetchone()[0]

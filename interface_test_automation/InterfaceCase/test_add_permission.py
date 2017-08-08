@@ -29,16 +29,16 @@ class test_addPermission(ParametrizedTestCase):
                                          "100804,100805,100809,100810,100811,100812,100813,100814,100815,100816,"
                                          "100817,100818,1009,100904,100905,100906,100907,100908,"}
         if self.roleName == '':
-            print ('################### Error : Please input role name ###################')
+            print ('******************** Error : Please input role name ********************')
         else:
             ####查询绑定机构id
             self.db2_cursor.execute('SELECT id FROM sys_role WHERE name = %s', (self.roleName,))
             if len(self.db2_cursor.fetchall()) == 0:
-                print ('################### Error : role un-existed ###################')
+                print ('******************** Error : role un-existed ********************')
             else:
                 self.db2_cursor.execute('SELECT id FROM sys_role WHERE name = %s', (self.roleName,))
                 if len(self.db2_cursor.fetchall()) > 1:
-                    print ('################### Error : you have the same role ###################')
+                    print ('******************** Error : you have the same role ********************')
                 else:
                     self.db2_cursor.execute('SELECT id FROM sys_role WHERE name = %s', (self.roleName,))
                     self.roleId = self.db2_cursor.fetchone()[0]
