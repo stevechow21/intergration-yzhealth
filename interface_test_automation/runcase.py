@@ -109,3 +109,4 @@ class  RunCase:
                  test_suite.addTest(TestInterfaceCase(test_data.test_method, test_data, http, db1_cursor, db2_cursor))
                  runner.run(test_suite)
                  db1_cursor.close()
+                 db2_cursor.close()
