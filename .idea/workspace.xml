@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c3f77ce-335c-4584-b7b1-f6e06cea05bd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_org_relate_room.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_permission.py" afterPath="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_permission.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interface_test_automation/runcase.py" afterPath="$PROJECT_DIR$/interface_test_automation/runcase.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interface_test_automation/test_interface_case.py" afterPath="$PROJECT_DIR$/interface_test_automation/test_interface_case.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run_case_config.ini" afterPath="$PROJECT_DIR$/run_case_config.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yzhealth_clearTestData.sql" afterPath="$PROJECT_DIR$/yzhealth_clearTestData.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +27,8 @@
       <file leaf-file-name="test_interface_case.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface_test_automation/test_interface_case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1007">
-              <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+            <state relative-caret-position="202">
+              <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
               <folding>
                 <element signature="e#68#83#0" expanded="true" />
               </folding>
@@ -55,46 +56,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_case_config.ini" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run_case_config.ini">
+      <file leaf-file-name="test_org_relate_room.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_org_relate_room.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="82">
+              <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_add_org.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_org.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="runcase.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface_test_automation/runcase.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-543">
-              <caret line="74" column="27" lean-forward="false" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="27" />
-              <folding>
-                <element signature="e#68#83#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_add_permission.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_permission.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
-              <folding>
-                <element signature="e#68#78#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -117,6 +84,16 @@
               <folding>
                 <element signature="e#68#91#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run_case_config.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run_case_config.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -165,7 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/interface_test_automation/interface/parametrized_testcase.py" />
         <option value="$PROJECT_DIR$/interface_test_automation/configrunmode.py" />
         <option value="$PROJECT_DIR$/interface_test_automation/datastruct.py" />
         <option value="$PROJECT_DIR$/interface_test_automation/getdb.py" />
@@ -211,11 +187,12 @@
         <option value="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_account.py" />
         <option value="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_role.py" />
         <option value="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_account_relate_role.py" />
-        <option value="$PROJECT_DIR$/interface_test_automation/test_interface_case.py" />
         <option value="$PROJECT_DIR$/interface_test_automation/runcase.py" />
         <option value="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_permission.py" />
-        <option value="$PROJECT_DIR$/run_case_config.ini" />
         <option value="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_department_room.py" />
+        <option value="$PROJECT_DIR$/interface_test_automation/test_interface_case.py" />
+        <option value="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_org_relate_room.py" />
+        <option value="$PROJECT_DIR$/run_case_config.ini" />
       </list>
     </option>
   </component>
@@ -780,16 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface_test_automation/test_interface_case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1007">
-          <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
-          <folding>
-            <element signature="e#68#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interface_test_automation/globalconfig.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -797,32 +764,6 @@
           <folding>
             <element signature="e#68#91#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface_test_automation/initialization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface_test_automation/runcase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-543">
-          <caret line="74" column="27" lean-forward="false" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="27" />
-          <folding>
-            <element signature="e#68#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_case_config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,29 +783,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_org.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_department_room.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_permission.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+        <state relative-caret-position="-318">
+          <caret line="15" column="48" lean-forward="true" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
           <folding>
             <element signature="e#68#78#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_test_automation/runcase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-543">
+          <caret line="74" column="27" lean-forward="false" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="27" />
+          <folding>
+            <element signature="e#68#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_test_automation/initialization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_org.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_test_automation/test_interface_case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+          <folding>
+            <element signature="e#68#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_case_config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_org_relate_room.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
