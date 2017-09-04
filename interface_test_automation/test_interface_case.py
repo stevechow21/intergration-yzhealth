@@ -18,6 +18,7 @@ from InterfaceCase.test_add_permission import test_addPermission
 from InterfaceCase.test_add_account import test_addAccount
 from InterfaceCase.test_account_relate_role import test_accountRelateRole
 from InterfaceCase.test_org_relate_room import test_orgRelateRoom
+from InterfaceCase.test_add_doctor import test_addDoctor
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -55,6 +56,10 @@ class TestInterfaceCase(ParametrizedTestCase):
     #### 后台操作-添加科室
     def test_org_relate_room(self):
         test_orgRelateRoom.test_orgRelateRoom(self)
+
+    #### 后台操作-添加医生
+    def test_add_doctor(self):
+        test_addDoctor.test_addDoctor(self)
 
     def tearDown(self):
         pass
