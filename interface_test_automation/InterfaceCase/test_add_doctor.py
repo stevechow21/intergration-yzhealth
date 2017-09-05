@@ -8,7 +8,7 @@ sys.path.append("..")
 from interface_test_automation.initialization import ParametrizedTestCase
 import json
 
-#### 后台操作-添加机构
+#### 后台操作-添加医生
 class test_addDoctor(ParametrizedTestCase):
     def test_addDoctor(self):
         #### 根据被测接口的实际情况，合理的添加HTTP头

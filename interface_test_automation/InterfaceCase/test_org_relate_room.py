@@ -8,7 +8,7 @@ sys.path.append("..")
 from interface_test_automation.initialization import ParametrizedTestCase
 import json
 
-#### 后台操作-添加机构
+#### 后台操作-添加科室
 class test_orgRelateRoom(ParametrizedTestCase):
     def test_orgRelateRoom(self):
         #### 根据被测接口的实际情况，合理的添加HTTP头

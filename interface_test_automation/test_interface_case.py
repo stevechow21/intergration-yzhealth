@@ -20,6 +20,7 @@ from InterfaceCase.test_account_relate_role import test_accountRelateRole
 from InterfaceCase.test_org_relate_room import test_orgRelateRoom
 from InterfaceCase.test_add_doctor import test_addDoctor
 from InterfaceCase.test_add_archive import test_addArchive
+from InterfaceCase.test_add_transfer_linkman import test_addTransferLinkman
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -65,6 +66,10 @@ class TestInterfaceCase(ParametrizedTestCase):
     #### 后台操作-添加档案
     def test_add_archive(self):
         test_addArchive.test_addArchive(self)
+
+    #### 后台操作-添加联系人
+    def test_add_transfer_linkman(self):
+        test_addTransferLinkman.test_addTransferLinkman(self)
 
     def tearDown(self):
         pass
