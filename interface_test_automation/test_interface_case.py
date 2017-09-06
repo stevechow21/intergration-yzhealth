@@ -21,6 +21,7 @@ from InterfaceCase.test_org_relate_room import test_orgRelateRoom
 from InterfaceCase.test_add_doctor import test_addDoctor
 from InterfaceCase.test_add_archive import test_addArchive
 from InterfaceCase.test_add_transfer_linkman import test_addTransferLinkman
+from InterfaceCase.test_add_down_transfer import test_addDownTransfer
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -70,6 +71,10 @@ class TestInterfaceCase(ParametrizedTestCase):
     #### 后台操作-添加联系人
     def test_add_transfer_linkman(self):
         test_addTransferLinkman.test_addTransferLinkman(self)
+
+    #### 后台操作-添加上转申请
+    def test_add_down_transfer(self):
+        test_addDownTransfer.test_addDownTransfer(self)
 
     def tearDown(self):
         pass
