@@ -46,3 +46,4 @@ class test_addAccount(ParametrizedTestCase):
                     self.UpdateRecordWithoutResponse(response)
                     self.BaseDataAssert(response)
                     self.UpdateRecordWithResponse()
+                    self.db2_cursor.execute("commit")

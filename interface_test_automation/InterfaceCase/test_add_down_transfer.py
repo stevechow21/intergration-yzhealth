@@ -118,6 +118,7 @@ class test_addDownTransfer(ParametrizedTestCase):
                                     self.UpdateRecordWithoutResponse(response)
                                     self.BaseDataAssert(response)
                                     self.UpdateRecordWithResponse()
+                                    self.db2_cursor.execute("commit")
 
         else:
             ####查询档案、转出机构信息、转入机构信息
@@ -150,45 +151,44 @@ class test_addDownTransfer(ParametrizedTestCase):
                         if self.transferOrgName == '':
                             print ('******************** Error : Please input transferOrgName ********************')
                         else:
-                            self.db2_cursor.execute('SELECT id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
+                            self.db2_cursor.execute('SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
                                                     ' organization_name = %s', (self.transferOrgName,))
                             if len(self.db2_cursor.fetchall()) == 0:
                                 print ('******************** Error : transferOrgName un-existed ********************')
                             else:
-                                self.db2_cursor.execute('SELECT id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
+                                self.db2_cursor.execute('SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
                                                         ' organization_name = %s', (self.transferOrgName,))
                                 if len(self.db2_cursor.fetchall()) > 1:
                                     print ('******************** Error : you have the same transferOrgName ********************')
                                 else:
                                     self.db2_cursor.execute(
-                                        'SELECT id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
+                                        'SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
                                         ' organization_name = %s', (self.transferOrgName,))
                                     self.transferOrgInfo = self.db2_cursor.fetchone()
                                     self.transferOrgId = self.transferOrgInfo[0]
                                     self.transferDoctorId = self.transferOrgInfo[1]
                                     self.transferDoctorName = self.transferOrgInfo[2]
                                     self.transferDoctorPhone = self.transferOrgInfo[3]
-
                                     if self.subordinateOrgName == '':
                                         print (
                                         '******************** Error : Please input subordinateOrgName ********************')
                                     else:
                                         self.db2_cursor.execute(
-                                            'SELECT id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
+                                            'SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
                                             ' organization_name = %s', (self.subordinateOrgName,))
                                         if len(self.db2_cursor.fetchall()) == 0:
                                             print (
                                             '******************** Error : subordinateOrgName un-existed ********************')
                                         else:
                                             self.db2_cursor.execute(
-                                                'SELECT id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
+                                                'SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
                                                 ' organization_name = %s', (self.subordinateOrgName,))
                                             if len(self.db2_cursor.fetchall()) > 1:
                                                 print (
                                                 '******************** Error : you have the same subordinateOrgName ********************')
                                             else:
                                                 self.db2_cursor.execute(
-                                                    'SELECT id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
+                                                    'SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
                                                     ' organization_name = %s', (self.subordinateOrgName,))
                                                 self.subordinateOrgInfo = self.db2_cursor.fetchone()
                                                 self.subordinateOrgId = self.subordinateOrgInfo[0]
@@ -226,3 +226,4 @@ class test_addDownTransfer(ParametrizedTestCase):
                                                 self.UpdateRecordWithoutResponse(response)
                                                 self.BaseDataAssert(response)
                                                 self.UpdateRecordWithResponse()
+                                                self.db2_cursor.execute("commit")

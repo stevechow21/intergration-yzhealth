@@ -57,6 +57,7 @@ class test_addOrg(ParametrizedTestCase):
                     self.UpdateRecordWithoutResponse(response)
                     self.BaseDataAssert(response)
                     self.UpdateRecordWithResponse()
+                    self.db2_cursor.execute("commit")
             # try:
             #     self.db2_cursor.execute('SELECT id FROM organization WHERE name = %s', (self.higherOrg,))
             #     self.higherOrgId = self.db2_cursor.fetchone()[0]
