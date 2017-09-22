@@ -23,6 +23,7 @@ from InterfaceCase.test_add_archive import test_addArchive
 from InterfaceCase.test_add_transfer_linkman import test_addTransferLinkman
 from InterfaceCase.test_add_down_transfer import test_addDownTransfer
 from InterfaceCase.test_add_service_package import test_addServicePackage
+from InterfaceCase.test_add_service_project import test_addServiceProject
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -80,6 +81,10 @@ class TestInterfaceCase(ParametrizedTestCase):
     #### 后台操作-添加服务包
     def test_add_service_package(self):
         test_addServicePackage.test_addServicePackage(self)
+
+    #### 后台操作-添加服务项目
+    def test_add_service_project(self):
+        test_addServiceProject.test_addServiceProject(self)
 
     def tearDown(self):
         pass
