@@ -24,6 +24,7 @@ from InterfaceCase.test_add_transfer_linkman import test_addTransferLinkman
 from InterfaceCase.test_add_down_transfer import test_addDownTransfer
 from InterfaceCase.test_add_service_package import test_addServicePackage
 from InterfaceCase.test_add_service_project import test_addServiceProject
+from InterfaceCase.test_publish_service_package import test_publishServicePackage
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -85,6 +86,10 @@ class TestInterfaceCase(ParametrizedTestCase):
     #### 后台操作-添加服务项目
     def test_add_service_project(self):
         test_addServiceProject.test_addServiceProject(self)
+
+    #### 后台操作-发布服务包
+    def test_publish_service_package(self):
+        test_publishServicePackage.test_publishServicePackage(self)
 
     def tearDown(self):
         pass
