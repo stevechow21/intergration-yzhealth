@@ -15,3 +15,5 @@ DELETE FROM yzhealth.service_package where name like 'AUTO%';
 DELETE FROM yzhealth.data_dictionary where name like 'AUTO%';
 DELETE FROM yzhealth.service_project where name like 'AUTO%';
 DELETE FROM yzhealth.signing_team where team_name like 'AUTO%';
+DELETE FROM yzhealth.signing_doctor where doctor_name like 'AUTO%';
+DELETE FROM yzhealth.signing_agreement where name like 'AUTO%';

@@ -26,6 +26,7 @@ from InterfaceCase.test_add_service_package import test_addServicePackage
 from InterfaceCase.test_add_service_project import test_addServiceProject
 from InterfaceCase.test_publish_service_package import test_publishServicePackage
 from InterfaceCase.test_add_signing_team import test_addSigningTeam
+from InterfaceCase.test_add_signing_doctor import test_addSigningDoctor
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -95,6 +96,10 @@ class TestInterfaceCase(ParametrizedTestCase):
     #### 后台操作-添加签约团队
     def test_add_signing_team(self):
         test_addSigningTeam.test_addSigningTeam(self)
+
+    #### 后台操作-添加签约医生
+    def test_add_signing_doctor(self):
+        test_addSigningDoctor.test_addSigningDoctor(self)
 
 
     def tearDown(self):
