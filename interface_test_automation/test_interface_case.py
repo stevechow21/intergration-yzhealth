@@ -28,6 +28,7 @@ from InterfaceCase.test_publish_service_package import test_publishServicePackag
 from InterfaceCase.test_add_signing_team import test_addSigningTeam
 from InterfaceCase.test_add_signing_doctor import test_addSigningDoctor
 from InterfaceCase.test_add_signing_agreement import test_addSigningAgreement
+from InterfaceCase.test_publish_signing_agreement import test_publishSigningAgreement
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -106,6 +107,9 @@ class TestInterfaceCase(ParametrizedTestCase):
     def test_add_signing_agreement(self):
         test_addSigningAgreement.test_addSigningAgreement(self)
 
+    #### 后台操作-启用签约协议
+    def test_publish_signing_agreement(self):
+        test_publishSigningAgreement.test_publishSigningAgreement(self)
 
     def tearDown(self):
         pass
