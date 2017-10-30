@@ -25,6 +25,7 @@ from InterfaceCase.test_add_down_transfer import test_addDownTransfer
 from InterfaceCase.test_add_service_package import test_addServicePackage
 from InterfaceCase.test_add_service_project import test_addServiceProject
 from InterfaceCase.test_publish_service_package import test_publishServicePackage
+from InterfaceCase.test_add_signing_team import test_addSigningTeam
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -90,6 +91,11 @@ class TestInterfaceCase(ParametrizedTestCase):
     #### 后台操作-发布服务包
     def test_publish_service_package(self):
         test_publishServicePackage.test_publishServicePackage(self)
+
+    #### 后台操作-添加签约团队
+    def test_add_signing_team(self):
+        test_addSigningTeam.test_addSigningTeam(self)
+
 
     def tearDown(self):
         pass

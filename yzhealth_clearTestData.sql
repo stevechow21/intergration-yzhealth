@@ -1,5 +1,5 @@
 SET SQL_SAFE_UPDATES = 0;
-DELETE FROM yzhealth.sys_account_roles WHERE sysaccount_id in (SELECT id from sys_account WHERE real_name like 'AUTO%');
+DELETE FROM yzhealth.sys_account_roles WHERE sysaccount_id in (SELECT id from yzhealth.sys_account WHERE real_name like 'AUTO%');
 DELETE FROM yzhealth.sys_account where real_name like 'AUTO%';
 DELETE FROM yzhealth.sys_role WHERE name like 'AUTO%';
 DELETE FROM yzhealth.organization WHERE name like 'AUTO%';
@@ -14,3 +14,4 @@ DELETE FROM yzhealth.public_visit_transfer where archive_name like 'AUTO%';
 DELETE FROM yzhealth.service_package where name like 'AUTO%';
 DELETE FROM yzhealth.data_dictionary where name like 'AUTO%';
 DELETE FROM yzhealth.service_project where name like 'AUTO%';
+DELETE FROM yzhealth.signing_team where team_name like 'AUTO%';
