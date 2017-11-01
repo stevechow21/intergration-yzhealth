@@ -30,6 +30,7 @@ from InterfaceCase.test_add_signing_doctor import test_addSigningDoctor
 from InterfaceCase.test_add_signing_agreement import test_addSigningAgreement
 from InterfaceCase.test_publish_signing_agreement import test_publishSigningAgreement
 from InterfaceCase.test_add_signing import test_addSigning
+from InterfaceCase.test_org_login import test_orgLogin
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -43,6 +44,10 @@ class TestInterfaceCase(ParametrizedTestCase):
     #### 后台操作-编辑测试数据（登录、机构、套餐、检查项）
     def edit_data(self):
         editData.editData(self)
+
+    #### 后台操作-机构用户登录
+    def test_org_login(self):
+        test_orgLogin.test_orgLogin(self)
 
     #### 后台操作-添加机构
     def test_add_org(self):
