@@ -31,6 +31,7 @@ from InterfaceCase.test_add_signing_agreement import test_addSigningAgreement
 from InterfaceCase.test_publish_signing_agreement import test_publishSigningAgreement
 from InterfaceCase.test_add_signing import test_addSigning
 from InterfaceCase.test_org_login import test_orgLogin
+from InterfaceCase.test_approve_down_transfer import test_approveDownTransfer
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -120,6 +121,10 @@ class TestInterfaceCase(ParametrizedTestCase):
     #### 后台操作-添加签约
     def test_add_signing(self):
         test_addSigning.test_addSigning(self)
+
+    #### 后台操作-下转审核
+    def test_approve_down_transfer(self):
+        test_approveDownTransfer.test_approveDownTransfer(self)
 
     def tearDown(self):
         pass

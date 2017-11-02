@@ -38,192 +38,118 @@ class test_addDownTransfer(ParametrizedTestCase):
             self.archiveAddress = self.data['archiveAddress']
             self.archivePhone = self.data['archivePhone']
             self.archiveBirthday = self.data['archiveBirthday']
-            if self.transferOrgName == '':
-                print ('******************** Error : Please input transferOrgName ********************')
-            else:
-                self.db2_cursor.execute('SELECT id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
-                                        ' organization_name = %s', (self.transferOrgName,))
-                if len(self.db2_cursor.fetchall()) == 0:
-                    print ('******************** Error : transferOrgName un-existed ********************')
-                else:
-                    self.db2_cursor.execute('SELECT id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
-                                            ' organization_name = %s', (self.transferOrgName,))
-                    if len(self.db2_cursor.fetchall()) > 1:
-                        print ('******************** Error : you have the same transferOrgName ********************')
-                    else:
-                        self.db2_cursor.execute(
-                            'SELECT id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
-                            ' organization_name = %s', (self.transferOrgName,))
-                        self.transferOrgInfo = self.db2_cursor.fetchone()
-                        self.transferOrgId = self.transferOrgInfo[0]
-                        self.transferDoctorId = self.transferOrgInfo[1]
-                        self.transferDoctorName = self.transferOrgInfo[2]
-                        self.transferDoctorPhone = self.transferOrgInfo[3]
 
-                        if self.subordinateOrgName == '':
-                            print (
-                                '******************** Error : Please input subordinateOrgName ********************')
-                        else:
-                            self.db2_cursor.execute(
-                                'SELECT id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
-                                ' organization_name = %s', (self.subordinateOrgName,))
-                            if len(self.db2_cursor.fetchall()) == 0:
-                                print (
-                                    '******************** Error : subordinateOrgName un-existed ********************')
-                            else:
-                                self.db2_cursor.execute(
-                                    'SELECT id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
-                                    ' organization_name = %s', (self.subordinateOrgName,))
-                                if len(self.db2_cursor.fetchall()) > 1:
-                                    print (
-                                        '******************** Error : you have the same subordinateOrgName ********************')
-                                else:
-                                    self.db2_cursor.execute(
-                                        'SELECT id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
-                                        ' organization_name = %s', (self.subordinateOrgName,))
-                                    self.subordinateOrgInfo = self.db2_cursor.fetchone()
-                                    self.subordinateOrgId = self.subordinateOrgInfo[0]
-                                    self.acceptDoctorId = self.subordinateOrgInfo[1]
-                                    self.acceptDoctorName = self.subordinateOrgInfo[2]
-                                    self.acceptDoctorPhone = self.subordinateOrgInfo[3]
+            self.db2_cursor.execute(
+                'SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
+                ' organization_name = %s', (self.transferOrgName,))
+            self.transferOrgInfo = self.db2_cursor.fetchone()
+            self.transferOrgId = self.transferOrgInfo[0]
+            self.transferDoctorId = self.transferOrgInfo[1]
+            self.transferDoctorName = self.transferOrgInfo[2]
+            self.transferDoctorPhone = self.transferOrgInfo[3]
 
-                                    self.transferParams = {
-                                        'archiveId': '',
-                                        'archiveName': self.archiveName,
-                                        'archiveIdCard': self.archiveIdCard,
-                                        'archiveGender': self.archiveGender,
-                                        'archiveAddress': self.archiveAddress,
-                                        'archivePhone': self.archivePhone,
-                                        'archiveBirthday': '1979-07-29',
-                                        'contact': '',
-                                        'contactPhone': '',
-                                        'transferOrgId': self.transferOrgId,
-                                        'transferOrgName': self.transferOrgName,
-                                        'transferDoctorId': self.transferDoctorId,
-                                        'transferDoctorName': self.transferDoctorName,
-                                        'transferDoctorPhone': self.transferDoctorPhone,
-                                        'subordinateOrgId': self.subordinateOrgId,
-                                        'subordinateOrgName': self.subordinateOrgName,
-                                        'acceptDoctorId': self.acceptDoctorId,
-                                        'acceptDoctorName': self.acceptDoctorName,
-                                        'acceptDoctorPhone': self.acceptDoctorPhone,
-                                        'transferDate': self.transferDate,
-                                        'status': self.status
-                                    }
-                                    self.baseParams.update(self.transferParams)
-                                    self.params = json.dumps(self.baseParams)
-                                    print (self.params)
-                                    response = self.http.post(self.test_data.request_url, self.params)
-                                    print (response)
-                                    self.UpdateRecordWithoutResponse(response)
-                                    self.BaseDataAssert(response)
-                                    self.UpdateRecordWithResponse()
-                                    self.db2_cursor.execute("commit")
+            self.db2_cursor.execute(
+                'SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
+                ' organization_name = %s', (self.subordinateOrgName,))
+            self.subordinateOrgInfo = self.db2_cursor.fetchone()
+            self.subordinateOrgId = self.subordinateOrgInfo[0]
+            self.acceptDoctorId = self.subordinateOrgInfo[1]
+            self.acceptDoctorName = self.subordinateOrgInfo[2]
+            self.acceptDoctorPhone = self.subordinateOrgInfo[3]
+
+            self.transferParams = {
+                'archiveId': '',
+                'archiveName': self.archiveName,
+                'archiveIdCard': self.archiveIdCard,
+                'archiveGender': self.archiveGender,
+                'archiveAddress': self.archiveAddress,
+                'archivePhone': self.archivePhone,
+                'archiveBirthday': '1979-07-29',
+                'contact': '',
+                'contactPhone': '',
+                'transferOrgId': self.transferOrgId,
+                'transferOrgName': self.transferOrgName,
+                'transferDoctorId': self.transferDoctorId,
+                'transferDoctorName': self.transferDoctorName,
+                'transferDoctorPhone': self.transferDoctorPhone,
+                'subordinateOrgId': self.subordinateOrgId,
+                'subordinateOrgName': self.subordinateOrgName,
+                'acceptDoctorId': self.acceptDoctorId,
+                'acceptDoctorName': self.acceptDoctorName,
+                'acceptDoctorPhone': self.acceptDoctorPhone,
+                'transferDate': self.transferDate,
+                'status': self.status
+            }
+            self.baseParams.update(self.transferParams)
+            self.params = json.dumps(self.baseParams)
+            # print (self.params)
+            # response = self.http.post(self.test_data.request_url, self.params)
+            # print (response)
+            # self.UpdateRecordWithoutResponse(response)
+            # self.BaseDataAssert(response)
+            # self.UpdateRecordWithResponse()
+            # self.db2_cursor.execute("commit")
 
         else:
             ####查询档案、转出机构信息、转入机构信息
-            if self.archiveName == '':
-                print ('******************** Error : Please input archiveName ********************')
-            else:
-                self.db2_cursor.execute('SELECT id, name, idcard, gender, address, phone, contactperson, contactphone FROM'
-                                        ' archive WHERE name = %s', (self.archiveName,))
-                if len(self.db2_cursor.fetchall()) == 0:
-                    print ('******************** Error : archive un-existed ********************')
-                else:
-                    self.db2_cursor.execute(
-                        'SELECT id, name, idcard, gender, address, phone, contactperson, contactphone FROM'
-                        ' archive WHERE name = %s', (self.archiveName,))
-                    if len(self.db2_cursor.fetchall()) > 1:
-                        print ('******************** Error : you have the same archive ********************')
-                    else:
-                        self.db2_cursor.execute(
-                            'SELECT id, idcard, gender, address, phone, contactperson, contactphone FROM'
-                            ' archive WHERE name = %s', (self.archiveName,))
-                        self.archiveInfo = self.db2_cursor.fetchone()
-                        self.archiveId = self.archiveInfo[0]
-                        self.archiveIdCard = self.archiveInfo[1]
-                        self.archiveGender = self.archiveInfo[2]
-                        self.archiveAddress = self.archiveInfo[3]
-                        self.archivePhone = self.archiveInfo[4]
-                        self.contact = self.archiveInfo[5]
-                        self.contactPhone = self.archiveInfo[6]
+            self.db2_cursor.execute(
+                'SELECT id, idcard, gender, address, phone, contactperson, contactphone FROM'
+                ' archive WHERE name = %s', (self.archiveName,))
+            self.archiveInfo = self.db2_cursor.fetchone()
+            self.archiveId = self.archiveInfo[0]
+            self.archiveIdCard = self.archiveInfo[1]
+            self.archiveGender = self.archiveInfo[2]
+            self.archiveAddress = self.archiveInfo[3]
+            self.archivePhone = self.archiveInfo[4]
+            self.contact = self.archiveInfo[5]
+            self.contactPhone = self.archiveInfo[6]
 
-                        if self.transferOrgName == '':
-                            print ('******************** Error : Please input transferOrgName ********************')
-                        else:
-                            self.db2_cursor.execute('SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
-                                                    ' organization_name = %s', (self.transferOrgName,))
-                            if len(self.db2_cursor.fetchall()) == 0:
-                                print ('******************** Error : transferOrgName un-existed ********************')
-                            else:
-                                self.db2_cursor.execute('SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
-                                                        ' organization_name = %s', (self.transferOrgName,))
-                                if len(self.db2_cursor.fetchall()) > 1:
-                                    print ('******************** Error : you have the same transferOrgName ********************')
-                                else:
-                                    self.db2_cursor.execute(
-                                        'SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
-                                        ' organization_name = %s', (self.transferOrgName,))
-                                    self.transferOrgInfo = self.db2_cursor.fetchone()
-                                    self.transferOrgId = self.transferOrgInfo[0]
-                                    self.transferDoctorId = self.transferOrgInfo[1]
-                                    self.transferDoctorName = self.transferOrgInfo[2]
-                                    self.transferDoctorPhone = self.transferOrgInfo[3]
-                                    if self.subordinateOrgName == '':
-                                        print (
-                                        '******************** Error : Please input subordinateOrgName ********************')
-                                    else:
-                                        self.db2_cursor.execute(
-                                            'SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
-                                            ' organization_name = %s', (self.subordinateOrgName,))
-                                        if len(self.db2_cursor.fetchall()) == 0:
-                                            print (
-                                            '******************** Error : subordinateOrgName un-existed ********************')
-                                        else:
-                                            self.db2_cursor.execute(
-                                                'SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
-                                                ' organization_name = %s', (self.subordinateOrgName,))
-                                            if len(self.db2_cursor.fetchall()) > 1:
-                                                print (
-                                                '******************** Error : you have the same subordinateOrgName ********************')
-                                            else:
-                                                self.db2_cursor.execute(
-                                                    'SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
-                                                    ' organization_name = %s', (self.subordinateOrgName,))
-                                                self.subordinateOrgInfo = self.db2_cursor.fetchone()
-                                                self.subordinateOrgId = self.subordinateOrgInfo[0]
-                                                self.acceptDoctorId = self.subordinateOrgInfo[1]
-                                                self.acceptDoctorName = self.subordinateOrgInfo[2]
-                                                self.acceptDoctorPhone = self.subordinateOrgInfo[3]
+            self.db2_cursor.execute(
+                'SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
+                ' organization_name = %s', (self.transferOrgName,))
+            self.transferOrgInfo = self.db2_cursor.fetchone()
+            self.transferOrgId = self.transferOrgInfo[0]
+            self.transferDoctorId = self.transferOrgInfo[1]
+            self.transferDoctorName = self.transferOrgInfo[2]
+            self.transferDoctorPhone = self.transferOrgInfo[3]
 
-                                                self.transferParams = {
-                                                    'archiveId': self.archiveId,
-                                                    'archiveName': self.archiveName,
-                                                    'archiveIdCard': self.archiveIdCard,
-                                                    'archiveGender': self.archiveGender,
-                                                    'archiveAddress': self.archiveAddress,
-                                                    'archivePhone': self.archivePhone,
-                                                    'contact': self.contact,
-                                                    'contactPhone': self.contactPhone,
-                                                    'transferOrgId': self.transferOrgId,
-                                                    'transferOrgName': self.transferOrgName,
-                                                    'transferDoctorId': self.transferDoctorId,
-                                                    'transferDoctorName': self.transferDoctorName,
-                                                    'transferDoctorPhone': self.transferDoctorPhone,
-                                                    'subordinateOrgId': self.subordinateOrgId,
-                                                    'subordinateOrgName': self.subordinateOrgName,
-                                                    'acceptDoctorId': self.acceptDoctorId,
-                                                    'acceptDoctorName': self.acceptDoctorName,
-                                                    'acceptDoctorPhone': self.acceptDoctorPhone,
-                                                    'transferDate': self.transferDate,
-                                                    'status': self.status
-                                                }
-                                                self.baseParams.update(self.transferParams)
-                                                self.params = json.dumps(self.baseParams)
-                                                print (self.params)
-                                                response = self.http.post(self.test_data.request_url, self.params)
-                                                print (response)
-                                                self.UpdateRecordWithoutResponse(response)
-                                                self.BaseDataAssert(response)
-                                                self.UpdateRecordWithResponse()
-                                                self.db2_cursor.execute("commit")
+            self.db2_cursor.execute(
+                'SELECT organization_id, doctor_id, linkman, phone FROM transfer_linkman WHERE'
+                ' organization_name = %s', (self.subordinateOrgName,))
+            self.subordinateOrgInfo = self.db2_cursor.fetchone()
+            self.subordinateOrgId = self.subordinateOrgInfo[0]
+            self.acceptDoctorId = self.subordinateOrgInfo[1]
+            self.acceptDoctorName = self.subordinateOrgInfo[2]
+            self.acceptDoctorPhone = self.subordinateOrgInfo[3]
+
+            self.transferParams = {
+                'archiveId': self.archiveId,
+                'archiveName': self.archiveName,
+                'archiveIdCard': self.archiveIdCard,
+                'archiveGender': self.archiveGender,
+                'archiveAddress': self.archiveAddress,
+                'archivePhone': self.archivePhone,
+                'contact': self.contact,
+                'contactPhone': self.contactPhone,
+                'transferOrgId': self.transferOrgId,
+                'transferOrgName': self.transferOrgName,
+                'transferDoctorId': self.transferDoctorId,
+                'transferDoctorName': self.transferDoctorName,
+                'transferDoctorPhone': self.transferDoctorPhone,
+                'subordinateOrgId': self.subordinateOrgId,
+                'subordinateOrgName': self.subordinateOrgName,
+                'acceptDoctorId': self.acceptDoctorId,
+                'acceptDoctorName': self.acceptDoctorName,
+                'acceptDoctorPhone': self.acceptDoctorPhone,
+                'transferDate': self.transferDate,
+                'status': self.status
+            }
+            self.baseParams.update(self.transferParams)
+            self.params = json.dumps(self.baseParams)
+            print (self.params)
+        response = self.http.post(self.test_data.request_url, self.params)
+        print (response)
+        self.UpdateRecordWithoutResponse(response)
+        self.BaseDataAssert(response)
+        self.UpdateRecordWithResponse()
+        self.db2_cursor.execute("commit")
