@@ -26,7 +26,7 @@ class test_approveDownTransfer(ParametrizedTestCase):
         self.subordinateOrgName = self.data['subordinateOrgName']
         ####查询转诊id
         self.db2_cursor.execute('SELECT id FROM public_visit_transfer WHERE archive_name = %s and '
-                                'transfer_org_name = %s and subordinate_org_name = %s',
+                                'transfer_org_name = %s and subordinate_org_name = %s and type = "2"',
                                 (self.archiveName, self.transferOrgName, self.subordinateOrgName))
         self.publicTransferId = self.db2_cursor.fetchone()[0]
 
