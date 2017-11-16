@@ -33,6 +33,7 @@ from InterfaceCase.test_add_signing import test_addSigning
 from InterfaceCase.test_org_login import test_orgLogin
 from InterfaceCase.test_approve_down_transfer import test_approveDownTransfer
 from InterfaceCase.test_add_up_transfer import test_addUpTransfer
+from InterfaceCase.test_approve_up_transfer import test_approveUpTransfer
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -98,6 +99,10 @@ class TestInterfaceCase(ParametrizedTestCase):
     #### 后台操作-添加上转
     def test_add_up_transfer(self):
         test_addUpTransfer.test_addUpTransfer(self)
+
+    #### 后台操作-上转审核
+    def test_approve_up_transfer(self):
+        test_approveUpTransfer.test_approveUpTransfer(self)
 
     #### 后台操作-添加服务包
     def test_add_service_package(self):
