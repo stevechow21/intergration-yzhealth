@@ -7,6 +7,7 @@ DELETE FROM yzhealth.doctor WHERE name like 'AUTO%';
 DELETE FROM yzhealth.doctor where department_room_id in (SELECT id FROM yzhealth.department_room where room_name like 'AUTO%');
 DELETE FROM yzhealth.department_room WHERE room_name like 'AUTO%';
 DELETE FROM yzhealth.archive WHERE name like 'AUTO%';
+DELETE FROM yzhealth.archive_to_org where org_name like 'AUTO%';
 DELETE FROM yzhealth.transfer_linkman WHERE linkman like 'AUTO%';
 DELETE FROM yzhealth.up_visit_transfer where id in (SELECT transfer_id FROM yzhealth.public_visit_transfer where archive_name like 'AUTO%' and type = '1');
 DELETE FROM yzhealth.down_visit_transfer where id in (SELECT transfer_id FROM yzhealth.public_visit_transfer where archive_name like 'AUTO%' and type = '2');

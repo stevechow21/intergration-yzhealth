@@ -22,6 +22,7 @@ class editData(ParametrizedTestCase):
         self.http.set_header(header)
         self.data = json.loads(self.test_data.request_param)
         self.name = self.data['name']
+        #### 根据数据库test_data表中request_name字段判断
         if self.test_data.request_name == 'edit-org':
             self.db2_cursor.execute('SELECT id FROM organization WHERE name = %s', (self.name,))
             org_id = self.db2_cursor.fetchone()[0]

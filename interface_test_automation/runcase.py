@@ -44,10 +44,10 @@ class  RunCase:
                  test_data.test_desc = tmp_result[5]
                  test_data.result = ''
                  test_data.reason = ''
-                 #### 记录token
-                 db1_cursor.execute('SELECT token FROM stored_cache WHERE tid = "1"')
-                 tmp_token = db1_cursor.fetchone()
-                 test_data.token = tmp_token[0]
+                 # #### 记录token
+                 # db1_cursor.execute('SELECT token FROM stored_cache WHERE tid = "1"')
+                 # tmp_token = db1_cursor.fetchone()
+                 # test_data.token = tmp_token[0]
 
                  try:
                      query = ('INSERT INTO test_result(case_id, http_method, request_name, request_url,'
@@ -86,10 +86,10 @@ class  RunCase:
                  test_data.test_desc = tmp_result[5]
                  test_data.result = ''
                  test_data.reason = ''
-                 #### 搜索token
-                 db1_cursor.execute('SELECT token FROM stored_cache WHERE tid = "1"')
-                 tmp_token = db1_cursor.fetchone()
-                 test_data.token = tmp_token[0]
+                 # #### 搜索token
+                 # db1_cursor.execute('SELECT token FROM stored_cache WHERE tid = "1"')
+                 # tmp_token = db1_cursor.fetchone()
+                 # test_data.token = tmp_token[0]
 
                  try:
                      query = ('INSERT INTO test_result(case_id, http_method, request_name, request_url,'

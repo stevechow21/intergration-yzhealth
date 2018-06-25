@@ -16,7 +16,7 @@ class DataStruct:
         self.test_desc = ''    #测试(用力)描述
         self.result = ''       #测试结果
         self.reason = ''       #失败原因
-        self.token = ''        #token
+        # self.token = ''        #token
 
 
 
