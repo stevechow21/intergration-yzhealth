@@ -6,9 +6,7 @@ __author__ = 'steve'
 import unittest
 
 class ParametrizedTestCase(unittest.TestCase):
-    """ TestCase classes that want to be parametrized should
-        inherit from this class.
-    """
+    #### 用于被测试接口用例继承，通用化方法
     def __init__(self, methodName='runTest', test_data=None, http=None, db1_cursor=None, db2_cursor=None):
         super(ParametrizedTestCase, self).__init__(methodName)
         self.test_data = test_data

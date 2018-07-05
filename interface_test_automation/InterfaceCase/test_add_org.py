@@ -23,10 +23,18 @@ class test_addOrg(ParametrizedTestCase):
         self.data = json.loads(self.test_data.request_param)
         self.orgName = self.data['name']
         self.higherOrg = self.data['higherOrg']
-        self.baseParams = {"abbreviation":"","type":"1","property":"","category":"","level":"","provinceId":"16",
-                           "cityId":"161","districtId":"36","reportTitle":"","owner":"","phoneNo":"",
+        self.district = self.data['district']
+        self.db2_cursor.execute('SELECT id, city_id, province_id FROM district WHERE name = %s', (self.district,))
+        self.districtInfo = self.db2_cursor.fetchone()
+        self.districtId = self.districtInfo[0]
+        self.cityId = self.districtInfo[1]
+        self.provinceId = self.districtInfo[2]
+
+        self.baseParams = {"abbreviation":"","type":"1","property":"","category":"","level":"","provinceId":self.provinceId,
+                           "cityId":self.cityId,"districtId":self.districtId,"reportTitle":"","owner":"","phoneNo":"",
                            "coordinate":"","description":"",
                            "imgPath":"","isInsurance":"1","isPublish":"1"}
+        # 判断是否有上级机构
         if self.higherOrg == '':
             self.orgParams = {'name': self.orgName, 'orgName': '全国', 'orgId': '1000', 'address': 'AUTO机构地址'}
             self.baseParams.update(self.orgParams)
@@ -36,6 +44,7 @@ class test_addOrg(ParametrizedTestCase):
             self.UpdateRecordWithoutResponse(response)
             self.BaseDataAssert(response)
             self.UpdateRecordWithResponse()
+            self.db2_cursor.execute("commit")
         else:
             ####查询上级机构id
             self.db2_cursor.execute('SELECT id FROM organization WHERE name = %s', (self.higherOrg,))
