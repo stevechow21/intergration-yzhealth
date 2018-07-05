@@ -4,13 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/interface_test_automation/confighttp.py" line="116" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c3f77ce-335c-4584-b7b1-f6e06cea05bd" name="Default" comment="delete un-use file">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
+    <list default="true" id="9c3f77ce-335c-4584-b7b1-f6e06cea05bd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_org.py" afterPath="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_org.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_permission.py" afterPath="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_permission.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interface_test_automation/initialization.py" afterPath="$PROJECT_DIR$/interface_test_automation/initialization.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run_case_config.ini" afterPath="$PROJECT_DIR$/run_case_config.ini" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,11 +41,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_add_org.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_add_org.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_org.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
               <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/interface_test_automation/InterfaceCase/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="4" lean-forward="true" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -81,18 +87,6 @@
             <state relative-caret-position="200">
               <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="confighttp.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface_test_automation/confighttp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-              <folding>
-                <element signature="e#68#89#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -176,7 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/interface_test_automation/interface/add_data.py" />
         <option value="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_package_to_org.py" />
         <option value="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_package_to_examine.py" />
         <option value="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_release_package.py" />
@@ -227,6 +220,7 @@
         <option value="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_add_permission.py" />
         <option value="$PROJECT_DIR$/run_case_config.ini" />
         <option value="$PROJECT_DIR$/interface_test_automation/initialization.py" />
+        <option value="$PROJECT_DIR$/interface_test_automation/InterfaceCase/test.py" />
       </list>
     </option>
   </component>
@@ -556,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529911006492</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updated">
+      <created>1530772891803</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1530772891803</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -590,7 +591,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update run case config, run with scenario" />
     <MESSAGE value="delete un-use file" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete un-use file" />
+    <MESSAGE value="updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -606,7 +608,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_get_order_list.py" />
     <entry file="file://$PROJECT_DIR$/interface_test_automation/InterfaceCase/test_get_homepage.py" />
     <entry file="file://$PROJECT_DIR$/locust/locustfile.py" />
     <entry file="file://C:/Python33/Lib/site-packages/mysql/connector/conversion.py">
@@ -950,6 +951,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_test_automation/InterfaceCase/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" lean-forward="true" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
           <folding />
         </state>
       </provider>
