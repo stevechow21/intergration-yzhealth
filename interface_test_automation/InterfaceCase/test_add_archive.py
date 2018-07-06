@@ -31,7 +31,14 @@ class test_addArchive(ParametrizedTestCase):
                            "permanentType":"0","contactperson":"","contactphone":"","bloodType":"-1","isRH":"-1",
                            "national":"0","educationLevel":"0","profession":"0","maritalStatus":"0",
                            "medicalVal":"pastHistoryNothing,_","familyVal":"familyHistoryNothing,_",
-                           "personVal":"personalHistoryNothing,_","allergicVal":"allergyHistoryNothing,_","id":""}
+                           "personVal":"personalHistoryNothing,_","allergicVal":"allergyHistoryNothing,_","id":"",
+                           "medicareCard":"","archiveCode":"","way":"","ywgm":"00","ywgmName":"","bls":"00",
+                           "jb": "00","gxy":"","tnb":"","gxb":"","mxzsxfjb":"","exzl":"","ncz":"","yzjsza":"","jhb":"",
+                           "gy":"","qtfdcrb": "", "zyb": "", "qt": "", "ss": "00", "name_one_ss": "", "date_one_ss": "",
+                           "name_two_ss": "", "date_two_ss": "", "ws": "00","name_one_ws":"","date_one_ws":"","name_two_ws":"",
+                           "date_two_ws":"","sx":"00","name_one_sx":"","date_one_sx":"","name_two_sx":"","date_two_sx":"",
+                           "fq":"00","mq":"00","xdjm":"00","zn":"00","ycs":"00","diseaseName":"","cjqk":"00","disabilityName":"",
+                           "tag":"create"}
         ####查询机构id
         self.db2_cursor.execute('SELECT id FROM organization WHERE name = %s', (self.organization,))
         if len(self.db2_cursor.fetchall()) == 0:
@@ -48,6 +55,7 @@ class test_addArchive(ParametrizedTestCase):
                                   'birthday': self.birthday}
                 self.baseParams.update(self.arcParams)
                 self.params = json.dumps(self.baseParams)
+                print (self.params)
                 response = self.http.post(self.test_data.request_url, self.params)
                 print (response)
                 self.UpdateRecordWithoutResponse(response)
