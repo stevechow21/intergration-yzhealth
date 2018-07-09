@@ -24,24 +24,24 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="36810550-4488-4a92-904a-b6c66223509e">
+      <connection connection-id="b3a32c29-cdae-48d0-9363-440989ee8356">
         <schema name="yzhealth" object-types="column, function, table, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="36810550-4488-4a92-904a-b6c66223509e">
-      <console name="QA database" type="STANDARD" />
+    <connection id="b3a32c29-cdae-48d0-9363-440989ee8356">
+      <console name="yzhealth" type="STANDARD" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="36810550-4488-4a92-904a-b6c66223509e" />
+    <connection id="b3a32c29-cdae-48d0-9363-440989ee8356" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
-    <mapping file-url="file://$PROJECT_DIR$/yzhealth_clearTestData.sql" connection-id="36810550-4488-4a92-904a-b6c66223509e" session-id="MAIN" current-schema="yzhealth" />
+    <mapping file-url="file://$PROJECT_DIR$/yzhealth_clearTestData.sql" connection-id="b3a32c29-cdae-48d0-9363-440989ee8356" session-id="MAIN" current-schema="yzhealth" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />
@@ -63,9 +63,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="36810550-4488-4a92-904a-b6c66223509e" active="true">
+      <connection id="b3a32c29-cdae-48d0-9363-440989ee8356" active="true">
         <database>
-          <name value="QA database" />
+          <name value="yzhealth" />
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
@@ -76,7 +76,7 @@
           <url-type value="DATABASE" />
           <host value="172.16.10.100" />
           <port value="13306" />
-          <database value="yzhealth" />
+          <database value="mysql" />
           <os-authentication value="false" />
           <empty-password value="false" />
           <user value="root" />
