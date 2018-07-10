@@ -23,11 +23,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="b3a32c29-cdae-48d0-9363-440989ee8356">
-        <schema name="yzhealth" object-types="column, function, table, view" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="b3a32c29-cdae-48d0-9363-440989ee8356">
@@ -59,7 +55,9 @@
     <filters />
   </component>
   <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
-    <recently-used-interfaces />
+    <recently-used-interfaces>
+      <mapping database-type="MYSQL" interface-id="DEFAULT" />
+    </recently-used-interfaces>
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
@@ -76,7 +74,7 @@
           <url-type value="DATABASE" />
           <host value="172.16.10.100" />
           <port value="13306" />
-          <database value="mysql" />
+          <database value="yzhealth" />
           <os-authentication value="false" />
           <empty-password value="false" />
           <user value="root" />
