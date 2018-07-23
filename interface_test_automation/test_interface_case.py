@@ -34,6 +34,7 @@ from InterfaceCase.test_org_login import test_orgLogin
 from InterfaceCase.test_approve_down_transfer import test_approveDownTransfer
 from InterfaceCase.test_add_up_transfer import test_addUpTransfer
 from InterfaceCase.test_approve_up_transfer import test_approveUpTransfer
+from InterfaceCase.test_add_visitplan import test_addVisitPlan
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -135,6 +136,10 @@ class TestInterfaceCase(ParametrizedTestCase):
     #### 后台操作-添加签约
     def test_add_signing(self):
         test_addSigning.test_addSigning(self)
+
+    #### 后台操作-添加随访计划
+    def test_add_visit_plan(self):
+        test_addVisitPlan.test_addVisitPlan(self)
 
     def tearDown(self):
         pass
