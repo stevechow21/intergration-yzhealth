@@ -4,6 +4,7 @@
 __author__ = 'steve'
 
 from getdb import GetDB
+from getdb_mongo import GetMongoDB
 from confighttp import ConfigHttp
 from configrunmode import ConfigRunMode
 
@@ -15,6 +16,9 @@ class Global:
         # 读取并配置数据库服务器IP，端口等信息
         self.db1 = GetDB('../db_config.ini', 'DATABASE1')
         self.db2 = GetDB('../db_config.ini', 'DATABASE2')
+
+        # 读取并配置MongoDB服务器IP，端口等信息
+        self.mongo_db1 = GetMongoDB('../mongo_db_config.ini', 'MONGO1')
 
         # 读取运行模式配置
         self.run_mode_config = ConfigRunMode('../run_case_config.ini')
@@ -29,6 +33,10 @@ class Global:
     # 返回应用数据库连接
     def get_db2_conn(self):
         return self.db2.get_conn()
+
+    # 返回Mongo数据库连接
+    def get_mongo_db1_conn(self):
+        return self.mongo_db1.get_conn_mongo()
 
     # 获取运行模式配置
     def get_run_mode(self):
@@ -46,3 +54,4 @@ class Global:
         # 关闭数据库连接
         self.db1.get_conn().close()
         self.db2.get_conn().close()
+        # self.mongodb1.get_conn_mongo().close()

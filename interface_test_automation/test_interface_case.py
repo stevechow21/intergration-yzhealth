@@ -35,6 +35,7 @@ from InterfaceCase.test_approve_down_transfer import test_approveDownTransfer
 from InterfaceCase.test_add_up_transfer import test_addUpTransfer
 from InterfaceCase.test_approve_up_transfer import test_approveUpTransfer
 from InterfaceCase.test_add_visitplan import test_addVisitPlan
+from InterfaceCase.test_finish_visitplan import test_finishVisitPlan
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -140,6 +141,10 @@ class TestInterfaceCase(ParametrizedTestCase):
     #### 后台操作-添加随访计划
     def test_add_visit_plan(self):
         test_addVisitPlan.test_addVisitPlan(self)
+
+    #### 后台操作-完成随访计划
+    def test_finish_visit_plan(self):
+        test_finishVisitPlan.test_finishVisitPlan(self)
 
     def tearDown(self):
         pass

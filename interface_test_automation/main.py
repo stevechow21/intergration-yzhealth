@@ -20,12 +20,13 @@ if __name__ == '__main__':
     run_case_list = global_config.get_run_case_list()  # 需要运行的用例列表
     db1_conn = global_config.get_db1_conn()   # 数据库连接
     db2_conn = global_config.get_db2_conn()   # 数据库连接
+    mongo_db1_conn = global_config.get_mongo_db1_conn()    # MongoDB连接
     http = global_config.get_http()           # http
 
     # 运行测试用例
     runner = unittest.TextTestRunner()
     case_runner = RunCase()
-    case_runner.run_case(runner, run_mode, run_case_list, db1_conn, db2_conn, http)
+    case_runner.run_case(runner, run_mode, run_case_list, db1_conn, db2_conn, http, mongo_db1_conn)
 
     # 记录测试结束时间
     end_time = datetime.datetime.now()
