@@ -25,11 +25,10 @@ class test_finishVisitPlan(ParametrizedTestCase):
         self.type = self.data['type']
 
         ####查询mongo中随访计划id
-        query = {'idCard': self.idcard, 'type': 1}
+        query = {'idCard': self.idcard, 'type': eval(self.type)}
         result = self.mongo_db1_collection.find_one(query)
         print (result)
         self.visitId = result['_id']
-
         self.visitParams = {
             'hypertensionPlanId': self.visitId
         }

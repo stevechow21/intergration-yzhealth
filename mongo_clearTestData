@@ -1,0 +1,1 @@
+db.getCollection('visitPlan').remove({'name':/AUTO/})
