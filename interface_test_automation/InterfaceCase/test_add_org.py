@@ -30,10 +30,10 @@ class test_addOrg(ParametrizedTestCase):
         self.cityId = self.districtInfo[1]
         self.provinceId = self.districtInfo[2]
 
-        self.baseParams = {"abbreviation":"","type":"1","property":"","category":"","level":"","provinceId":self.provinceId,
-                           "cityId":self.cityId,"districtId":self.districtId,"reportTitle":"","owner":"","phoneNo":"",
-                           "coordinate":"","description":"",
-                           "imgPath":"","isInsurance":"1","isPublish":"1"}
+        self.baseParams = {"abbreviation": "", "type": "1", "property": "", "category": "", "level": "",
+                           "provinceId": self.provinceId, "cityId": self.cityId, "districtId": self.districtId,
+                           "reportTitle": "", "owner": "", "phoneNo": "", "coordinate": "", "description": "",
+                           "prefectureTotal": "500", "imgPath": "", "isInsurance": "1", "isPublish": "1"}
         # 判断是否有上级机构
         if self.higherOrg == '':
             self.orgParams = {'name': self.orgName, 'orgName': '全国', 'orgId': '1000', 'address': 'AUTO机构地址'}

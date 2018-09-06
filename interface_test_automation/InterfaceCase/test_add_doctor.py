@@ -26,9 +26,10 @@ class test_addDoctor(ParametrizedTestCase):
         self.orgName = self.data['orgName']
         self.departmentRoomName = self.data['departmentRoomName']
 
-        self.baseParams = {"secondDepartmentRoomId":"-2","clinicalTitle":"0","teachingTitle":"0",
-                           "synopsis":"test summary","specialty":"test good at","isPublish":"1","headPic":"",
-                           "vocationalCertificate":"","idCard":"","orderIndex":"2","mobilePhone":""}
+        self.baseParams = {"secondDepartmentRoomId": "-2", "clinicalTitle": "0", "teachingTitle": "0",
+                           "synopsis": "test summary", "specialty": "test good at", "isPublish": "1", "headPic": "",
+                           "vocationalCertificate": "", "idCard": "", "orderIndex": "2", "mobilePhone": "",
+                           "entireOrganizationData": "0", "entireDoctorData": "0"}
         ####查询医生关联登录账户id
         self.db2_cursor.execute('SELECT id FROM sys_account WHERE login_name = %s', (self.loginName,))
         if len(self.db2_cursor.fetchall()) == 0:
