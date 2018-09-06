@@ -26,9 +26,8 @@ class test_visitPlanList(ParametrizedTestCase):
         self.visitPlanDate = self.data['visitPlanDate']
         self.params = '/' + str(self.type) + '.do'
         response = self.http.get(self.test_data.request_url, self.params)
-        print (response)
+        print(response)
         for visitInfo in response['records']:
-            print (visitInfo)
             if visitInfo['idCard'] == self.idCard and visitInfo['visitPlanDate'] == self.visitPlanDate:
                 try:
                     #### 根据case_id查询预期结果

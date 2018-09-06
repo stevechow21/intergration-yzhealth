@@ -26,7 +26,10 @@ class test_finishVisitPlan(ParametrizedTestCase):
 
         ####查询mongo中随访计划id
         query = {'idCard': self.idcard, 'type': eval(self.type)}
-        result = self.mongo_db1_collection.find_one(query)
+        collection = self.mongo_db1_collection['visitPlan']
+        result = collection.find_one(query)
+
+        # result = self.mongo_db1_collection.find_one(query)
         print (result)
         self.visitId = result['_id']
         self.visitParams = {

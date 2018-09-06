@@ -16,13 +16,11 @@ class GetMongoDB:
         config.read(ini_file)
         self.host = config[db]['host']
         self.db = config[db]['db']
-        self.collection = config[db]['collection']
 
     def get_conn_mongo(self):
         try:
             mongo = pymongo.MongoClient(self.host)
-            database = mongo[self.db]
-            conn_mongo = database[self.collection]
+            conn_mongo = mongo[self.db]
             return conn_mongo
         except Exception as e:
             print('%s', e)

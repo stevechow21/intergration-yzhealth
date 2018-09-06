@@ -5,7 +5,6 @@ __author__ = 'steve'
 
 import unittest
 from test_interface_case import TestInterfaceCase
-
 from datastruct import DataStruct
 
 global test_data
