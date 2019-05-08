@@ -19,3 +19,5 @@ DELETE FROM yzhealth.signing_team where team_name like 'AUTO%';
 DELETE FROM yzhealth.signing_doctor where doctor_name like 'AUTO%';
 DELETE FROM yzhealth.signing_agreement where name like 'AUTO%';
 DELETE FROM yzhealth.signing where archive_name like 'AUTO%';
+DELETE FROM yzhealth.cardiac_cerebral where name like 'AUTO%';
+DELETE FROM yzhealth.tumour where name like 'AUTO%';

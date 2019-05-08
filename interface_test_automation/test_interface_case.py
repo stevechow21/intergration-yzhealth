@@ -37,6 +37,7 @@ from InterfaceCase.test_approve_up_transfer import test_approveUpTransfer
 from InterfaceCase.test_add_visitplan import test_addVisitPlan
 from InterfaceCase.test_finish_visitplan import test_finishVisitPlan
 from InterfaceCase.test_visitplan_list import test_visitPlanList
+from InterfaceCase.test_add_cardiac_cerebral import test_addCardiacCerebral
 
 class TestInterfaceCase(ParametrizedTestCase):
 
@@ -150,6 +151,10 @@ class TestInterfaceCase(ParametrizedTestCase):
     #### 后台操作-获取随访计划列表
     def test_visit_plan_list(self):
         test_visitPlanList.test_visitPlanList(self)
+
+    #### 后台操作-添加心脑血管评估
+    def test_add_cardiacCerebral(self):
+        test_addCardiacCerebral.test_addCardiacCerebral(self)
 
     def tearDown(self):
         pass
